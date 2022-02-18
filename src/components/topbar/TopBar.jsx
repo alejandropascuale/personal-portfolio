@@ -17,7 +17,11 @@ export default function TopBar() {
           </div>
         </div>
         <div className="right">
-          this is the right
+          <div className="bars">
+            <span className="line1">-</span>
+            <span className="line2">-</span>
+            <span className="line3">-</span>
+          </div>
         </div>
       </div>
     </div>
