@@ -6,7 +6,9 @@ export default function TopBar() {
       <div className="wrapper">
         <div className="left">
           <a href="#intro" className='logo'>Portfolio</a>
-          <div className="itemContainer"></div>
+          <div className="itemContainer">
+            
+          </div>
         </div>
         <div className="right">
           this is the right
