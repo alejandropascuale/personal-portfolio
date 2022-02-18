@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import './App.scss';
 import Contact from './components/contact/Contact';
 import Intro from './components/intro/Intro';
+import Menu from './components/menu/Menu';
 import Portfolio from './components/portfolio/Portfolio';
 import Testimonials from './components/testimonials/Testimonials';
 import TopBar from './components/topbar/TopBar';
@@ -13,6 +14,7 @@ function App() {
   return (
     <div className="App">
       <TopBar menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
+      <Menu />
       <div className="sections">
         <Intro />
         <Portfolio />
