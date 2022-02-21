@@ -19,7 +19,6 @@
         list-style: none;
         display: flex;
         @include mobile {
-            margin: 10px 0;
             flex-wrap: wrap;              
             justify-content: center;
         }
