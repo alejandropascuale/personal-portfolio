@@ -54,6 +54,12 @@ export default function Testimonials() {
           </div>
         ))}
       </div>
+      <a href="#works" className='up'>
+        <img src="assets/up.png" alt="" />
+      </a>
+      <a href="#contact" className='down'>
+        <img src="assets/down.png" alt="" />
+      </a>
     </div>
   )
 }

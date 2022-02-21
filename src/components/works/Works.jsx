@@ -65,6 +65,12 @@ export default function Works() {
       </div>
       <img src="assets/arrow.png" className='arrow left' alt="" onClick={() => handleClick('left')} />
       <img src="assets/arrow.png" className='arrow right' alt="" onClick={() => handleClick('right')} />
+      <a href="#portfolio" className='up'>
+        <img src="assets/up.png" alt="" />
+      </a>
+      <a href="#testimonials" className='down'>
+        <img src="assets/down.png" alt="" />
+      </a>
     </div>
   )
 }

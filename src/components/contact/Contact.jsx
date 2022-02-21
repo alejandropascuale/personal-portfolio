@@ -21,6 +21,9 @@ export default function Contact() {
           {message && <sapn>Tanks, I'll reply soon...</sapn>}
         </form>
       </div>
+      <a href="#testimonials" className='up'>
+        <img src="assets/up.png" alt="" />
+      </a>
     </div>
   )
 }

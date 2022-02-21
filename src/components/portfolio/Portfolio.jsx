@@ -76,6 +76,12 @@ export default function Portfolio() {
         ))
         }
       </div>
+      <a href="#intro" className='up'>
+        <img src="assets/up.png" alt="" />
+      </a>
+      <a href="#works" className='down'>
+        <img src="assets/down.png" alt="" />
+      </a>
     </div>
   )
 }

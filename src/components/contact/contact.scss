@@ -3,6 +3,7 @@
 .contact {
     background-color: white;
     display: flex;
+    position: relative;
     @include mobile {
         flex-direction: column;                
     }
@@ -66,6 +67,22 @@
             }
             span {
                 color: green;
+            }
+        }
+    }
+    .up {
+        position: absolute;
+        bottom: 10px;
+        left: 30%;
+
+        img {
+            width: 50px;
+            animation: arrowBlink 2s infinite;
+        }
+
+        @keyframes arrowBlink {
+            100% {
+                opacity: 0;
             }
         }
     }

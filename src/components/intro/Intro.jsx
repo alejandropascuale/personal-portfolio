@@ -28,7 +28,7 @@ export default function Intro() {
           <h1>Alejandro Pascuale</h1>
           <h3>Full Stack Developer <span ref={textRef}></span></h3>
         </div>
-        <a href="#portfolio">
+        <a href="#portfolio" className='down'>
           <img src="assets/down.png" alt="" />
         </a>
       </div>

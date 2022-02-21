@@ -5,6 +5,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 
     h1 {
         font-size: 50px;
@@ -67,6 +68,38 @@
                     opacity: 0.2;
                     z-index: 0;
                 }
+            }
+        }
+    }
+    .up {
+        position: absolute;
+        bottom: 10px;
+        left: 30%;
+
+        img {
+            width: 50px;
+            animation: arrowBlink 2s infinite;
+        }
+
+        @keyframes arrowBlink {
+            100% {
+                opacity: 0;
+            }
+        }
+    }
+    .down {
+        position: absolute;
+        bottom: 10px;
+        left: 40%;
+
+        img {
+            width: 30px;
+            animation: arrowBlink 2s infinite;
+        }
+
+        @keyframes arrowBlink {
+            100% {
+                opacity: 0;
             }
         }
     }

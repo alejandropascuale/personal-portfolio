@@ -129,4 +129,36 @@
             }
         }
     }
+    .up {
+        position: absolute;
+        bottom: 10px;
+        left: 30%;
+
+        img {
+            width: 50px;
+            animation: arrowBlink 2s infinite;
+        }
+
+        @keyframes arrowBlink {
+            100% {
+                opacity: 0;
+            }
+        }
+    }
+    .down {
+        position: absolute;
+        bottom: 10px;
+        left: 40%;
+
+        img {
+            width: 30px;
+            animation: arrowBlink 2s infinite;
+        }
+
+        @keyframes arrowBlink {
+            100% {
+                opacity: 0;
+            }
+        }
+    }
 }
