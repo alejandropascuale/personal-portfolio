@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react'
 
 import PortfolioList from '../portfolioList/PortfolioList'
 import './portfolio.scss'
+import { featuredPortfolio, webPortfolio, mobilePortfolio, designPortfolio, contentPortfolio } from '../../data';
 
 export default function Portfolio() {
   const [selected, setSelected] = useState('featured');
+  const [data, setData] = useState([]);
   const featuredList = [
     {
       id: 'featured',
@@ -26,7 +28,31 @@ export default function Portfolio() {
       id: 'branding',
       title: 'Branding'
     }
-  ]
+  ];
+
+  useEffect(() => {
+    switch (selected) {
+      case 'featured':
+        setData(featuredPortfolio);
+        break;
+      case 'webApi':
+        setData(webPortfolio);
+        break;
+      case 'mobileApp':
+        setData(mobilePortfolio);
+        break;
+      case 'design':
+        setData(designPortfolio);
+        break;
+      case 'branding':
+        setData(contentPortfolio);
+        break;
+      default:
+        setData(featuredPortfolio);
+        break;
+    }
+  }, [selected])
+
   return (
     <div className='portfolio' id='portfolio'>
       <h1>Portfolio</h1>
@@ -42,30 +68,13 @@ export default function Portfolio() {
         ))}
       </ul>
       <div className="container">
-        <div className="item">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAUcompress=1&resize=1200x900" alt="" />
-          <h3>Banking App</h3>
-        </div>
-        <div className="item">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAUcompress=1&resize=1200x900" alt="" />
-          <h3>Banking App</h3>
-        </div>
-        <div className="item">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAUcompress=1&resize=1200x900" alt="" />
-          <h3>Banking App</h3>
-        </div>
-        <div className="item">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAUcompress=1&resize=1200x900" alt="" />
-          <h3>Banking App</h3>
-        </div>
-        <div className="item">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAUcompress=1&resize=1200x900" alt="" />
-          <h3>Banking App</h3>
-        </div>
-        <div className="item">
-          <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKvdHn8GmPGCO0y3SJqNHACygpm0h9VycMHg&usqp=CAUcompress=1&resize=1200x900" alt="" />
-          <h3>Banking App</h3>
-        </div>
+        {data.map((d) => (
+          <div className="item">
+            <img src={d.img} alt={`${d.id} - ${d.title}`} />
+            <h3>{d.title}</h3>
+          </div>
+        ))
+        }
       </div>
     </div>
   )
