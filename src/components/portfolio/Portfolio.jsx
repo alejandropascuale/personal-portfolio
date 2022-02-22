@@ -1,4 +1,5 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect } from 'react';
+import { motion } from "framer-motion";
 
 import PortfolioList from '../portfolioList/PortfolioList'
 import './portfolio.scss'
@@ -67,15 +68,21 @@ export default function Portfolio() {
           />
         ))}
       </ul>
-      <div className="container">
+      <motion.div 
+        className="container"
+        Layout 
+        animate={{ opacity: 1 }}
+        initial={{ opacity: 0 }}
+        exit={{ opacity: 0 }}
+      >
         {data.map((d) => (
-          <div className="item">
+          <div className="item" sites={d}>
             <img src={d.img} alt={`${d.id} - ${d.title}`} />
             <h3>{d.title}</h3>
           </div>
         ))
         }
-      </div>
+      </motion.div>
       <a href="#intro" className='up'>
         <img src="assets/up.png" alt="" />
       </a>
